@@ -1,5 +1,0 @@
-<map id="LocalPlayer" name="LocalPlayer">
-<area shape="rect" id="node1" title="Class representing Local Player." alt="" coords="7,171,98,197"/>
-<area shape="rect" id="node2" href="$class_player.html" title="Abstract class that represents Player." alt="" coords="23,95,82,121"/>
-<area shape="rect" id="node3" href="$class_chess_board.html" title="Class representing chess board." alt="" coords="5,5,100,32"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="AIComputerPlayer" name="AIComputerPlayer">
-<area shape="rect" id="node1" title="Class representing AI Computer." alt="" coords="22,247,151,273"/>
-<area shape="rect" id="node2" href="$class_medium_computer_player.html" title="Class representing Medium Computer." alt="" coords="5,171,168,197"/>
-<area shape="rect" id="node3" href="$class_player.html" title="Abstract class that represents Player." alt="" coords="57,95,116,121"/>
-<area shape="rect" id="node4" href="$class_chess_board.html" title="Class representing chess board." alt="" coords="39,5,134,32"/>
-</map>

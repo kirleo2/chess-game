@@ -10,6 +10,7 @@ Také realizoval jsem možnost ukládání rozehrané hry a možnost pak hru na�
 K tomu jsem využil binární kódování které jsem si sám vymyslel. V ukázkových save filech mám začátek hry dvou počítačů aby bylo vidět, který je "chytřeji".
 Polymorfismus jsem využil v realizaci pohybu figurek - všechny figury dědí od abstraktní třídy Figure a následně implementují virtuální metodu canMove a také jsem využil polymorfismus v ovládání hráčů - všechny hrače dědí od abstraktní třídy Player a implementují virtuální metodu move.
 K dispozici je dokumentace celé aplikace a Makefile, kterým se spouští. 
+
 "make build" - kompilace jednotlivých .cpp souborů
 "make compile" - linkování objektových souborů, vytvoří se spuspitelný soubor "chess"
 "make run" - spuštění aplikace
