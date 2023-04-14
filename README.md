@@ -1,32 +1,18 @@
-# chess-game
-Semestrální práce Šachy.
+# Chess Game
 
-Mým cílem bylo realizovat šachový program, založený na principu polimorfismu. 
-Realizoval jsem to v terminálu s využitím jenom ASCI symbolů.
-Můj program implementuje všechny povinné body :
-Jsou dodrženy všechna pravidla klasické varianty : Rošáda, Braní mimochodem a proměna pěšce.
-Implementoval jsem rovněž tři druhy složitosti počítače: lehký (náhodné tahy), průměrný (vždy sní figuru soupeře při možnosti) a "umělá inteligence" (minimax algoritmus).
-Také realizoval jsem možnost ukládání rozehrané hry a možnost pak hru načíst a pokračovat. 
-K tomu jsem využil binární kódování které jsem si sám vymyslel. V ukázkových save filech mám začátek hry dvou počítačů aby bylo vidět, který je "chytřeji".
-Polymorfismus jsem využil v realizaci pohybu figurek - všechny figury dědí od abstraktní třídy Figure a následně implementují virtuální metodu canMove a také jsem využil polymorfismus v ovládání hráčů - všechny hrače dědí od abstraktní třídy Player a implementují virtuální metodu move.
-K dispozici je dokumentace celé aplikace a Makefile, kterým se spouští. 
+This is a semester project for Chess.
 
-"make build" - kompilace jednotlivých .cpp souborů
-"make compile" - linkování objektových souborů, vytvoří se spuspitelný soubor "chess"
-"make run" - spuštění aplikace
-"make clean" - odstranění všech vygenerovaných souborů
+The goal was to implement a chess program based on the principle of polymorphism. The program was implemented in the terminal using only ASCII symbols.
 
+The program implements all mandatory features of chess, including castling, en passant, and pawn promotion. Three levels of computer difficulty were also implemented: Easy (random moves), Medium (always captures the opponent's piece when possible), and "Artificial Intelligence" (minimax algorithm).
 
-Semester project Chess.
+The program also has the ability to save and load a game in progress using a binary encoding that was created specifically for this purpose. Sample save files are included, which demonstrate the beginning of a game between two computers to showcase which one is "smarter".
 
-My goal was to implement a chess program based on the principle of polymorphism.
-I implemented the program in the terminal using only ASCII symbols.
-My program implements all mandatory features: Castling, En Passant, and Pawn Promotion.
-I also implemented three levels of computer difficulty: Easy (random moves), Medium (always captures opponent's piece when possible), and "Artificial Intelligence" (minimax algorithm).
-I also implemented the ability to save and load a game in progress using a binary encoding I created myself. In the sample save files, I have the beginning of a game between two computers to demonstrate which one is "smarter".
-I used polymorphism in implementing the movement of pieces - all pieces inherit from the abstract class Figure and subsequently implement the virtual method canMove, and I also used polymorphism in player control - all players inherit from the abstract class Player and implement the virtual method move.
-The documentation for the entire application and a Makefile, which is used to run it, are available.
-"make build" compiles individual .cpp files.
-"make compile" links object files and creates an executable file called "chess".
-"make run" runs the application.
-"make clean" - clears all created files
+Polymorphism was used in implementing the movement of pieces, with all pieces inheriting from the abstract class Figure and implementing the virtual method canMove. Polymorphism was also used in player control, with all players inheriting from the abstract class Player and implementing the virtual method move.
+
+Documentation for the entire application and a Makefile, which is used to run it, are available. The following commands can be used with the Makefile:
+
+- "make build" - compiles individual .cpp files.
+- "make compile" - links object files and creates an executable file called "chess".
+- "make run" - runs the application.
+- "make clean" - clears all created files.
