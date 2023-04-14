@@ -1,0 +1,4 @@
+<map id="King" name="King">
+<area shape="rect" id="node1" title="Class representing chess figure &#45; King." alt="" coords="11,80,59,107"/>
+<area shape="rect" id="node2" href="$class_figure.html" title="Abstract class that represents a chess Figure." alt="" coords="5,5,64,32"/>
+</map>

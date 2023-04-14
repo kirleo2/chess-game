@@ -1,0 +1,110 @@
+\doxysection{Pawn Class Reference}
+\label{class_pawn}\index{Pawn@{Pawn}}
+
+
+Class representing chess figure -\/ \doxyref{Pawn}{p.}{class_pawn}.  
+
+
+
+
+{\ttfamily \#include $<$Pawn.\+hpp$>$}
+
+
+
+Inheritance diagram for Pawn\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{class_pawn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pawn\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_pawn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Pawn} (bool \textbf{ colour}, \textbf{ Chess\+Board} $\ast$board, int x=0, int y=0)
+\item 
+virtual \textbf{ Figure} $\ast$ \textbf{ clone} () const override
+\begin{DoxyCompactList}\small\item\em The function to make a copy of figure. \end{DoxyCompactList}\item 
+virtual bool \textbf{ can\+Move} (\textbf{ Ceil} from, \textbf{ Ceil} to) const override
+\begin{DoxyCompactList}\small\item\em The function to check if figure can be moved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing chess figure -\/ \doxyref{Pawn}{p.}{class_pawn}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_pawn_a15e84df5661b31e9a6b53e82dad2307d}} 
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{Pawn()}
+{\footnotesize\ttfamily Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{bool}]{colour,  }\item[{\textbf{ Chess\+Board} $\ast$}]{board,  }\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_pawn_adc0c07b8202d41760dcbc6b3cd0beed2}} 
+\index{Pawn@{Pawn}!canMove@{canMove}}
+\index{canMove@{canMove}!Pawn@{Pawn}}
+\doxysubsubsection{canMove()}
+{\footnotesize\ttfamily bool Pawn\+::can\+Move (\begin{DoxyParamCaption}\item[{\textbf{ Ceil}}]{from,  }\item[{\textbf{ Ceil}}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The function to check if figure can be moved. 
+
+For each figure it has it own implementation. It is important to have a pointer on board to check if other figures are on the way
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & instance of class \doxyref{Ceil}{p.}{class_ceil} (start ceil) \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & instance of class \doxyref{Ceil}{p.}{class_ceil} (end ceil)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The figure can move \\
+\hline
+{\em FALSE} & The figure can not move \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \textbf{ Figure} \doxyref{}{p.}{class_figure_a881aaea1c8bc3e1d81a582e6508fc8f2}.
+
+\mbox{\label{class_pawn_a5d2577a647bd954f3c4c73758dc1550e}} 
+\index{Pawn@{Pawn}!clone@{clone}}
+\index{clone@{clone}!Pawn@{Pawn}}
+\doxysubsubsection{clone()}
+{\footnotesize\ttfamily virtual \textbf{ Figure} $\ast$ Pawn\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The function to make a copy of figure. 
+
+\begin{DoxyReturn}{Returns}
+Pointer on class \doxyref{Figure}{p.}{class_figure}, that is a copy of itself 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Figure} \doxyref{}{p.}{class_figure_a41bf1b9c2af03790367664f43aa79fc2}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Pawn.\+hpp}\item 
+\textbf{ Pawn.\+cpp}\end{DoxyCompactItemize}

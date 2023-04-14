@@ -1,0 +1,71 @@
+\doxysection{Serialization.\+hpp}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  Serialization.h}}
+\DoxyCodeLine{3 \textcolor{comment}{//  chess}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{//  Created by Kirill on 19.05.2022.}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef Serialization\_h}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define Serialization\_h}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }Serializer \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     Serializer():}
+\DoxyCodeLine{26     bit\_position(0),}
+\DoxyCodeLine{27     byte\_position(0)}
+\DoxyCodeLine{28     \{\}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} putBit(\textcolor{keywordtype}{bool} bit);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} put3BitNumber(uint8\_t num);}
+\DoxyCodeLine{49     \textcolor{keywordtype}{bool} makeOutputFile(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& filename);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{private}:}
+\DoxyCodeLine{52     vector<uint8\_t> file\_bytes;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} bit\_position;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} byte\_position;}
+\DoxyCodeLine{55     uint8\_t mask = 0b10000000;}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{65 \textcolor{keyword}{class }Deserializer \{}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67 \textcolor{keyword}{public}:}
+\DoxyCodeLine{68     \textcolor{comment}{/*}}
+\DoxyCodeLine{69 \textcolor{comment}{     reading input file bytes, those we will keep in vector of unsigned 8-\/bit integers}}
+\DoxyCodeLine{70 \textcolor{comment}{     (the same thing as an unsigned char)}}
+\DoxyCodeLine{71 \textcolor{comment}{     */}}
+\DoxyCodeLine{72     Deserializer ( \textcolor{keyword}{const} \textcolor{keywordtype}{string} \& filename );}
+\DoxyCodeLine{73     }
+\DoxyCodeLine{74     \textcolor{keywordtype}{bool} isFileEmpty() \{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{return} !file\_bytes.size();}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} isBytesLeft()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{return} (current\_byte\_pos < (\textcolor{keywordtype}{int}) file\_bytes.size());}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85     }
+\DoxyCodeLine{86     \textcolor{keywordtype}{bool} isFileOpen ()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} file\_is\_open;}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89     }
+\DoxyCodeLine{97     \textcolor{keywordtype}{bool} getNextBit ();}
+\DoxyCodeLine{102     uint8\_t getNext3Bit();}
+\DoxyCodeLine{103     }
+\DoxyCodeLine{104 \textcolor{keyword}{private}:}
+\DoxyCodeLine{105     \textcolor{keywordtype}{int} current\_bit\_pos = 0;}
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} current\_byte\_pos = 0;}
+\DoxyCodeLine{107     \textcolor{keywordtype}{bool} file\_is\_open = \textcolor{keyword}{false};}
+\DoxyCodeLine{108     \textcolor{keyword}{const} uint8\_t mask = 0b10000000;}
+\DoxyCodeLine{109     vector <uint8\_t> file\_bytes;}
+\DoxyCodeLine{110 \};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* Serialization\_h */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

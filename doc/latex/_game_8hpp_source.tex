@@ -1,0 +1,65 @@
+\doxysection{Game.\+hpp}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  Game.hpp}}
+\DoxyCodeLine{3 \textcolor{comment}{//  chess}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{//  Created by Kirill on 04.05.2022.}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef Game\_hpp}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define Game\_hpp}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Board.hpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Move.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}DummyComputerPlayer.hpp"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}LocalPlayer.hpp"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}MediumComputerPlayer.hpp"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}AIComputerPlayer.hpp"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}Serialization.hpp"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{enum} PlayerTypes : uint8\_t \{}
+\DoxyCodeLine{22     LOCAL\_PLAYER = 0,}
+\DoxyCodeLine{23     DUMMY = 1,}
+\DoxyCodeLine{24     MEDIUM = 2,}
+\DoxyCodeLine{25     AI = 3}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{37 \textcolor{keyword}{class }Game \{}
+\DoxyCodeLine{38 \textcolor{keyword}{public}:}
+\DoxyCodeLine{39     Game(Player * p1, Player * p2);}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41     Game (\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& savePath);}
+\DoxyCodeLine{42     \string~Game() \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{for} (Figure * f : gameBoard-\/>getFigures()) \{}
+\DoxyCodeLine{44             \textcolor{keyword}{delete} f;}
+\DoxyCodeLine{45         \}}
+\DoxyCodeLine{46         \textcolor{keyword}{delete} gameBoard;}
+\DoxyCodeLine{47         \textcolor{keyword}{delete} player1;}
+\DoxyCodeLine{48         \textcolor{keyword}{delete} player2;}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} addMove(Move \& move);}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} startGame();}
+\DoxyCodeLine{62     }
+\DoxyCodeLine{63     }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} loadGame(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& filename);}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72 \textcolor{keyword}{private}:}
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} newGame;}
+\DoxyCodeLine{74     Player * player1;}
+\DoxyCodeLine{75     Player * player2;}
+\DoxyCodeLine{76     ChessBoard * gameBoard;}
+\DoxyCodeLine{77     Serializer moveEncoder;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{private}:}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} serializeMove(\textcolor{keyword}{const} Move \& move);}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} encodeGame();}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} checkDraw();}
+\DoxyCodeLine{100 \};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* Game\_hpp */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

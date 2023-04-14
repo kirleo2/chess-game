@@ -1,0 +1,91 @@
+\doxysection{Deserializer Class Reference}
+\label{class_deserializer}\index{Deserializer@{Deserializer}}
+
+
+Class that is necessary to decode all moves from a binary file.  
+
+
+
+
+{\ttfamily \#include $<$Serialization.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Deserializer} (const string \&filename)
+\item 
+bool \textbf{ is\+File\+Empty} ()
+\item 
+bool \textbf{ is\+Bytes\+Left} () const
+\begin{DoxyCompactList}\small\item\em Functiont for examination, if we can proceed with getting of next bytes and bits in our input file (if we didnt reach the end of the file) \end{DoxyCompactList}\item 
+bool \textbf{ is\+File\+Open} () const
+\item 
+bool \textbf{ get\+Next\+Bit} ()
+\begin{DoxyCompactList}\small\item\em Function to read a bit from a binary file. \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ get\+Next3\+Bit} ()
+\begin{DoxyCompactList}\small\item\em Function to read 3 bits based on get\+Next\+Bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is necessary to decode all moves from a binary file. 
+
+It has mask, bit and byte positions to write bits into a vector of bytes 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_deserializer_a3abfe296cdce089b451904938eb537af}} 
+\index{Deserializer@{Deserializer}!Deserializer@{Deserializer}}
+\index{Deserializer@{Deserializer}!Deserializer@{Deserializer}}
+\doxysubsubsection{Deserializer()}
+{\footnotesize\ttfamily Deserializer\+::\+Deserializer (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_deserializer_af58da7e94d9e7158927434295ca6276d}} 
+\index{Deserializer@{Deserializer}!getNext3Bit@{getNext3Bit}}
+\index{getNext3Bit@{getNext3Bit}!Deserializer@{Deserializer}}
+\doxysubsubsection{getNext3Bit()}
+{\footnotesize\ttfamily uint8\+\_\+t Deserializer\+::get\+Next3\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to read 3 bits based on get\+Next\+Bit. 
+
+\mbox{\label{class_deserializer_acae5159a8f04d9797b357502aa9666e9}} 
+\index{Deserializer@{Deserializer}!getNextBit@{getNextBit}}
+\index{getNextBit@{getNextBit}!Deserializer@{Deserializer}}
+\doxysubsubsection{getNextBit()}
+{\footnotesize\ttfamily bool Deserializer\+::get\+Next\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to read a bit from a binary file. 
+
+It reads bits using the mask 0b10000000 we move the \char`\"{}1\char`\"{} towards the right and get current bit in current byte using \& operator \mbox{\label{class_deserializer_a84b9734db1559974e136606d435c5e9a}} 
+\index{Deserializer@{Deserializer}!isBytesLeft@{isBytesLeft}}
+\index{isBytesLeft@{isBytesLeft}!Deserializer@{Deserializer}}
+\doxysubsubsection{isBytesLeft()}
+{\footnotesize\ttfamily bool Deserializer\+::is\+Bytes\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functiont for examination, if we can proceed with getting of next bytes and bits in our input file (if we didnt reach the end of the file) 
+
+\mbox{\label{class_deserializer_ab55949834e82b79cbf53518a64730c6a}} 
+\index{Deserializer@{Deserializer}!isFileEmpty@{isFileEmpty}}
+\index{isFileEmpty@{isFileEmpty}!Deserializer@{Deserializer}}
+\doxysubsubsection{isFileEmpty()}
+{\footnotesize\ttfamily bool Deserializer\+::is\+File\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_deserializer_aab4991d11f4ee55d2734d3515c7cf66e}} 
+\index{Deserializer@{Deserializer}!isFileOpen@{isFileOpen}}
+\index{isFileOpen@{isFileOpen}!Deserializer@{Deserializer}}
+\doxysubsubsection{isFileOpen()}
+{\footnotesize\ttfamily bool Deserializer\+::is\+File\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Serialization.\+hpp}\item 
+\textbf{ Serialization.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\doxysection{King.\+hpp}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  King.hpp}}
+\DoxyCodeLine{3 \textcolor{comment}{//  chess}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{//  Created by Kirill on 20.05.2022.}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef King\_hpp}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define King\_hpp}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef Figure\_hpp}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Figure.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }King : \textcolor{keyword}{public} Figure\{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     King (\textcolor{keywordtype}{bool} colour, ChessBoard * board, \textcolor{keywordtype}{int} x = 0, \textcolor{keywordtype}{int} y = 0) : Figure(colour, board, x, y) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (colour) icon = \textcolor{stringliteral}{"{}K"{}};}
+\DoxyCodeLine{23         \textcolor{keywordflow}{else} icon = \textcolor{stringliteral}{"{}k"{}};}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} Figure * clone()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return} \textcolor{keyword}{new} King(*\textcolor{keyword}{this});}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} canMove (Ceil from, Ceil to) \textcolor{keyword}{const override};}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* King\_hpp */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

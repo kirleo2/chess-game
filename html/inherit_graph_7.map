@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_player.html" title="Abstract class that represents Player." alt="" coords="5,56,64,83"/>
+<area shape="rect" id="node2" href="$class_dummy_computer_player.html" title="Class representing Dummy Computer." alt="" coords="112,5,275,32"/>
+<area shape="rect" id="node3" href="$class_local_player.html" title="Class representing Local Player." alt="" coords="148,56,239,83"/>
+<area shape="rect" id="node4" href="$class_medium_computer_player.html" title="Class representing Medium Computer." alt="" coords="112,107,275,133"/>
+<area shape="rect" id="node5" href="$class_a_i_computer_player.html" title="Class representing AI Computer." alt="" coords="323,107,452,133"/>
+</map>

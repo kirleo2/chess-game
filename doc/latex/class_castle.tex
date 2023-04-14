@@ -1,0 +1,110 @@
+\doxysection{Castle Class Reference}
+\label{class_castle}\index{Castle@{Castle}}
+
+
+Class representing chess figure -\/ \doxyref{Castle}{p.}{class_castle}.  
+
+
+
+
+{\ttfamily \#include $<$Castle.\+hpp$>$}
+
+
+
+Inheritance diagram for Castle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=125pt]{class_castle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Castle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_castle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Castle} (bool \textbf{ colour}, \textbf{ Chess\+Board} $\ast$board, int x=0, int y=0)
+\item 
+virtual \textbf{ Figure} $\ast$ \textbf{ clone} () const override
+\begin{DoxyCompactList}\small\item\em The function to make a copy of figure. \end{DoxyCompactList}\item 
+virtual bool \textbf{ can\+Move} (\textbf{ Ceil} from, \textbf{ Ceil} to) const override
+\begin{DoxyCompactList}\small\item\em The function to check if figure can be moved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing chess figure -\/ \doxyref{Castle}{p.}{class_castle}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_castle_aa65695d9392b25b203e1f495160c680c}} 
+\index{Castle@{Castle}!Castle@{Castle}}
+\index{Castle@{Castle}!Castle@{Castle}}
+\doxysubsubsection{Castle()}
+{\footnotesize\ttfamily Castle\+::\+Castle (\begin{DoxyParamCaption}\item[{bool}]{colour,  }\item[{\textbf{ Chess\+Board} $\ast$}]{board,  }\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_castle_a1840f65d76ae5f2bc8158cff02a2ab9f}} 
+\index{Castle@{Castle}!canMove@{canMove}}
+\index{canMove@{canMove}!Castle@{Castle}}
+\doxysubsubsection{canMove()}
+{\footnotesize\ttfamily bool Castle\+::can\+Move (\begin{DoxyParamCaption}\item[{\textbf{ Ceil}}]{from,  }\item[{\textbf{ Ceil}}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The function to check if figure can be moved. 
+
+For each figure it has it own implementation. It is important to have a pointer on board to check if other figures are on the way
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & instance of class \doxyref{Ceil}{p.}{class_ceil} (start ceil) \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & instance of class \doxyref{Ceil}{p.}{class_ceil} (end ceil)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The figure can move \\
+\hline
+{\em FALSE} & The figure can not move \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \textbf{ Figure} \doxyref{}{p.}{class_figure_a881aaea1c8bc3e1d81a582e6508fc8f2}.
+
+\mbox{\label{class_castle_ac69b83a65b5ad67c5da888fb2fb27629}} 
+\index{Castle@{Castle}!clone@{clone}}
+\index{clone@{clone}!Castle@{Castle}}
+\doxysubsubsection{clone()}
+{\footnotesize\ttfamily virtual \textbf{ Figure} $\ast$ Castle\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The function to make a copy of figure. 
+
+\begin{DoxyReturn}{Returns}
+Pointer on class \doxyref{Figure}{p.}{class_figure}, that is a copy of itself 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Figure} \doxyref{}{p.}{class_figure_a41bf1b9c2af03790367664f43aa79fc2}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Castle.\+hpp}\item 
+\textbf{ Castle.\+cpp}\end{DoxyCompactItemize}

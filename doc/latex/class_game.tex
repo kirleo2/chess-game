@@ -1,0 +1,101 @@
+\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+Class that represents the \doxyref{Game}{p.}{class_game} Engine.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Game} (\textbf{ Player} $\ast$p1, \textbf{ Player} $\ast$p2)
+\item 
+\textbf{ Game} (const string \&save\+Path)
+\item 
+\textbf{ $\sim$\+Game} ()
+\item 
+void \textbf{ add\+Move} (\textbf{ Move} \&move)
+\begin{DoxyCompactList}\small\item\em The function to add a record of last move. \end{DoxyCompactList}\item 
+void \textbf{ start\+Game} ()
+\begin{DoxyCompactList}\small\item\em Function starts an infinite cycle and asks each player for move. \end{DoxyCompactList}\item 
+void \textbf{ load\+Game} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em The function load a game from a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents the \doxyref{Game}{p.}{class_game} Engine. 
+
+It has\+: player1, player2 -\/ pointers on 2 players (they can be Local or Computer), gameboard -\/ pointer on chess board, status -\/ current game status, move\+Encoder -\/ instance of class \doxyref{Serializer}{p.}{class_serializer} that is necessary to encode all game moves 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_game_a7b1463ed9fbadac2e16453d04e7ec4c9}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{Game()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{\textbf{ Player} $\ast$}]{p1,  }\item[{\textbf{ Player} $\ast$}]{p2 }\end{DoxyParamCaption})}
+
+\mbox{\label{class_game_afd99e6f9817c1decfc90740eb4b267de}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{Game()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{const string \&}]{save\+Path }\end{DoxyParamCaption})}
+
+\mbox{\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{$\sim$Game()}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_game_a0ffd7ed8a57067c9293534fde1415c36}} 
+\index{Game@{Game}!addMove@{addMove}}
+\index{addMove@{addMove}!Game@{Game}}
+\doxysubsubsection{addMove()}
+{\footnotesize\ttfamily void Game\+::add\+Move (\begin{DoxyParamCaption}\item[{\textbf{ Move} \&}]{move }\end{DoxyParamCaption})}
+
+
+
+The function to add a record of last move. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em move} & instace of class \doxyref{Move}{p.}{class_move} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_game_a71e015d037c1d8415f4ce66b767921e7}} 
+\index{Game@{Game}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!Game@{Game}}
+\doxysubsubsection{loadGame()}
+{\footnotesize\ttfamily void Game\+::load\+Game (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+The function load a game from a binary file. 
+
+It will try to load moves one by one from a file and repeat a game 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & name of a bianary save file \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_game_ae8638ccdb0ef3bf39a6affa30aa1258f}} 
+\index{Game@{Game}!startGame@{startGame}}
+\index{startGame@{startGame}!Game@{Game}}
+\doxysubsubsection{startGame()}
+{\footnotesize\ttfamily void Game\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function starts an infinite cycle and asks each player for move. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Game.\+hpp}\item 
+\textbf{ Game.\+cpp}\end{DoxyCompactItemize}

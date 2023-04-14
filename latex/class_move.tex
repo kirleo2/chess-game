@@ -1,0 +1,110 @@
+\doxysection{Move Class Reference}
+\label{class_move}\index{Move@{Move}}
+
+
+Class that represents a move of figure.  
+
+
+
+
+{\ttfamily \#include $<$Move.\+h$>$}
+
+
+
+Collaboration diagram for Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_move__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Move} ()
+\item 
+\textbf{ Move} (const \textbf{ Ceil} \&\textbf{ from}, const \textbf{ Ceil} \&\textbf{ to}, bool colour)
+\item 
+void \textbf{ set\+Status} (int \textbf{ status})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ceil} \textbf{ from}
+\item 
+\textbf{ Ceil} \textbf{ to}
+\item 
+bool \textbf{ player\+Colour}
+\item 
+int \textbf{ move\+Info}
+\item 
+uint8\+\_\+t \textbf{ figure\+Code}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a move of figure. 
+
+It has two ceils (from and where was made move), move\+Info (appropriate signal), figure\+Code -\/ if it is signal to pawn transformation -\/ to which figure it should be transformed 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_move_a4b1acc3a67d30c385ad9a6000526393a}} 
+\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{Move()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Move\+::\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_move_ab39124939b75a039b554d9f6d25fc189}} 
+\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{Move()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Move\+::\+Move (\begin{DoxyParamCaption}\item[{const \textbf{ Ceil} \&}]{from,  }\item[{const \textbf{ Ceil} \&}]{to,  }\item[{bool}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_move_a20d5cbfa5979d039679e599a5ed737b6}} 
+\index{Move@{Move}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Move@{Move}}
+\doxysubsubsection{setStatus()}
+{\footnotesize\ttfamily void Move\+::set\+Status (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_move_ab68d95c55bb06f35cbbb43ae4b13e6cb}} 
+\index{Move@{Move}!figureCode@{figureCode}}
+\index{figureCode@{figureCode}!Move@{Move}}
+\doxysubsubsection{figureCode}
+{\footnotesize\ttfamily uint8\+\_\+t Move\+::figure\+Code}
+
+\mbox{\label{class_move_a8c0fd63a015f49825421044977430c97}} 
+\index{Move@{Move}!from@{from}}
+\index{from@{from}!Move@{Move}}
+\doxysubsubsection{from}
+{\footnotesize\ttfamily \textbf{ Ceil} Move\+::from}
+
+\mbox{\label{class_move_a9806927b4c9b67982ce47b0a2a7fcad1}} 
+\index{Move@{Move}!moveInfo@{moveInfo}}
+\index{moveInfo@{moveInfo}!Move@{Move}}
+\doxysubsubsection{moveInfo}
+{\footnotesize\ttfamily int Move\+::move\+Info}
+
+\mbox{\label{class_move_aa3c30fd647b73dd10816811b1bb22272}} 
+\index{Move@{Move}!playerColour@{playerColour}}
+\index{playerColour@{playerColour}!Move@{Move}}
+\doxysubsubsection{playerColour}
+{\footnotesize\ttfamily bool Move\+::player\+Colour}
+
+\mbox{\label{class_move_a889f2768ad8eaf4f3943e5397fa67870}} 
+\index{Move@{Move}!to@{to}}
+\index{to@{to}!Move@{Move}}
+\doxysubsubsection{to}
+{\footnotesize\ttfamily \textbf{ Ceil} Move\+::to}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Move.\+h}\end{DoxyCompactItemize}

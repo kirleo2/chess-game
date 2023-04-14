@@ -1,0 +1,87 @@
+\doxysection{AIComputer\+Player Class Reference}
+\label{class_a_i_computer_player}\index{AIComputerPlayer@{AIComputerPlayer}}
+
+
+Class representing AI Computer.  
+
+
+
+
+{\ttfamily \#include $<$AIComputer\+Player.\+hpp$>$}
+
+
+
+Inheritance diagram for AIComputer\+Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_a_i_computer_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AIComputer\+Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_a_i_computer_player__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ AIComputer\+Player} (const string \&\textbf{ name}, bool \textbf{ colour})
+\item 
+\textbf{ AIComputer\+Player} (bool \textbf{ colour}, \textbf{ Chess\+Board} $\ast$\textbf{ game\+Board})
+\item 
+virtual \textbf{ Move} \textbf{ move} () override
+\begin{DoxyCompactList}\small\item\em Function to make computers move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing AI Computer. 
+
+This class represents AI Computer that can find best move in MINIMAX\+\_\+\+DEPTH + 1 depth using minimax algorithm It heirs from \doxyref{Medium\+Computer\+Player}{p.}{class_medium_computer_player} to get function evaluate\+Board and its constants. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_a_i_computer_player_a1d4fc1858767c8b599932756ff5e097e}} 
+\index{AIComputerPlayer@{AIComputerPlayer}!AIComputerPlayer@{AIComputerPlayer}}
+\index{AIComputerPlayer@{AIComputerPlayer}!AIComputerPlayer@{AIComputerPlayer}}
+\doxysubsubsection{AIComputerPlayer()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily AIComputer\+Player\+::\+AIComputer\+Player (\begin{DoxyParamCaption}\item[{const string \&}]{name,  }\item[{bool}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_a_i_computer_player_a030f08f924b85eac21f210c2a6b9a532}} 
+\index{AIComputerPlayer@{AIComputerPlayer}!AIComputerPlayer@{AIComputerPlayer}}
+\index{AIComputerPlayer@{AIComputerPlayer}!AIComputerPlayer@{AIComputerPlayer}}
+\doxysubsubsection{AIComputerPlayer()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily AIComputer\+Player\+::\+AIComputer\+Player (\begin{DoxyParamCaption}\item[{bool}]{colour,  }\item[{\textbf{ Chess\+Board} $\ast$}]{game\+Board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_a_i_computer_player_ae6128d962ba75f86315b59815978fb0c}} 
+\index{AIComputerPlayer@{AIComputerPlayer}!move@{move}}
+\index{move@{move}!AIComputerPlayer@{AIComputerPlayer}}
+\doxysubsubsection{move()}
+{\footnotesize\ttfamily \textbf{ Move} AIComputer\+Player\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function to make computers move. 
+
+Using minimax function will be found best move in depth MINIMAX\+\_\+\+DEPTH + 1. If it will be more than 1, then it will be chosen randomly to make a game unique. 
+\begin{DoxyRetVals}{Return values}
+{\em Instance} & of class \doxyref{Move}{p.}{class_move} \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \textbf{ Medium\+Computer\+Player} \doxyref{}{p.}{class_medium_computer_player_a884fcb6b1ac1ff3eb6c1697a689dd886}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ AIComputer\+Player.\+hpp}\item 
+\textbf{ AIComputer\+Player.\+cpp}\end{DoxyCompactItemize}

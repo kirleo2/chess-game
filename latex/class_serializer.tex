@@ -1,0 +1,75 @@
+\doxysection{Serializer Class Reference}
+\label{class_serializer}\index{Serializer@{Serializer}}
+
+
+Class that is necessary to encode all movesinto a binary file.  
+
+
+
+
+{\ttfamily \#include $<$Serialization.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Serializer} ()
+\item 
+void \textbf{ put\+Bit} (bool bit)
+\begin{DoxyCompactList}\small\item\em Function to write a bit into a binary file. \end{DoxyCompactList}\item 
+void \textbf{ put3\+Bit\+Number} (uint8\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Function to write a 3 bit number into a binary file. \end{DoxyCompactList}\item 
+bool \textbf{ make\+Output\+File} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Method to write all encoded bytes into the result compressed file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that is necessary to encode all movesinto a binary file. 
+
+It has mask, bit and byte positions to write bits into a vector of bytes 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_serializer_a9fe7f31924098f75278d059f8443fd5b}} 
+\index{Serializer@{Serializer}!Serializer@{Serializer}}
+\index{Serializer@{Serializer}!Serializer@{Serializer}}
+\doxysubsubsection{Serializer()}
+{\footnotesize\ttfamily Serializer\+::\+Serializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_serializer_ac88ca17667f906c52f58ac1859cb424d}} 
+\index{Serializer@{Serializer}!makeOutputFile@{makeOutputFile}}
+\index{makeOutputFile@{makeOutputFile}!Serializer@{Serializer}}
+\doxysubsubsection{makeOutputFile()}
+{\footnotesize\ttfamily bool Serializer\+::make\+Output\+File (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Method to write all encoded bytes into the result compressed file. 
+
+\mbox{\label{class_serializer_ad90ba7812cb5bf706eb4f48b4ab0e730}} 
+\index{Serializer@{Serializer}!put3BitNumber@{put3BitNumber}}
+\index{put3BitNumber@{put3BitNumber}!Serializer@{Serializer}}
+\doxysubsubsection{put3BitNumber()}
+{\footnotesize\ttfamily void Serializer\+::put3\+Bit\+Number (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+
+
+Function to write a 3 bit number into a binary file. 
+
+This method is necessary to write board coordinates -\/ because they are encoded with 3 bits (0-\/7) \mbox{\label{class_serializer_afc19ce6ab82bef4ff082f3cc7b500a08}} 
+\index{Serializer@{Serializer}!putBit@{putBit}}
+\index{putBit@{putBit}!Serializer@{Serializer}}
+\doxysubsubsection{putBit()}
+{\footnotesize\ttfamily void Serializer\+::put\+Bit (\begin{DoxyParamCaption}\item[{bool}]{bit }\end{DoxyParamCaption})}
+
+
+
+Function to write a bit into a binary file. 
+
+This method writes bit on corrent position in current byte array using mask. We can imagine an infinite array of bytes 0x0 (0b00000000), that method fills it up with \char`\"{}1\char`\"{} on correct positions by moving \char`\"{}1\char`\"{} towards the right in mask. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Serialization.\+hpp}\item 
+\textbf{ Serialization.\+cpp}\end{DoxyCompactItemize}

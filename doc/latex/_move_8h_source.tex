@@ -1,0 +1,51 @@
+\doxysection{Move.\+h}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  Move.h}}
+\DoxyCodeLine{3 \textcolor{comment}{//  chess}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{//  Created by Kirill on 06.05.2022.}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef Move\_h}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define Move\_h}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Ceil.h"{}}}
+\DoxyCodeLine{11 \textcolor{comment}{//\#include "{}Player.hpp"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{enum} moves : \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{15     DEFAULT\_MOVE = 0,}
+\DoxyCodeLine{16     IS\_TRANSFORMATION = 1, \textcolor{comment}{// signal to transform a pawn}}
+\DoxyCodeLine{17     IS\_SHORT\_CASTLING = 2, \textcolor{comment}{// signal to short castling}}
+\DoxyCodeLine{18     IS\_LONG\_CASTLING = 3, \textcolor{comment}{// signal to long castling}}
+\DoxyCodeLine{19     IS\_EN\_PASSANT = 4 \textcolor{comment}{// signal for "{}en passant"{}}}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{29 \textcolor{keyword}{class }Move \{}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     Move()\{\}}
+\DoxyCodeLine{32     Move(\textcolor{keyword}{const} Ceil \& from, \textcolor{keyword}{const} Ceil \& to, \textcolor{keywordtype}{bool} colour):}
+\DoxyCodeLine{33     from(from),}
+\DoxyCodeLine{34     to(to),}
+\DoxyCodeLine{35     playerColour(colour),}
+\DoxyCodeLine{36     moveInfo(DEFAULT\_MOVE),}
+\DoxyCodeLine{37     figureCode(0)}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         }
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} setStatus(\textcolor{keywordtype}{int} status) \{}
+\DoxyCodeLine{42         moveInfo = status;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45     Ceil from;}
+\DoxyCodeLine{46     Ceil to;}
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} playerColour;}
+\DoxyCodeLine{48     \textcolor{keywordtype}{int} moveInfo;}
+\DoxyCodeLine{49     uint8\_t figureCode;}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* Move\_h */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

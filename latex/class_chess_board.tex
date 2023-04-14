@@ -1,0 +1,269 @@
+\doxysection{Chess\+Board Class Reference}
+\label{class_chess_board}\index{ChessBoard@{ChessBoard}}
+
+
+Class representing chess board.  
+
+
+
+
+{\ttfamily \#include $<$Board.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Chess\+Board} ()
+\item 
+\textbf{ $\sim$\+Chess\+Board} ()
+\item 
+void \textbf{ set\+Start} ()
+\begin{DoxyCompactList}\small\item\em The function to prepare a chess board. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+board} () const
+\begin{DoxyCompactList}\small\item\em The function to print a chess board into terminal. \end{DoxyCompactList}\item 
+bool \textbf{ is\+Valid\+Move} (const \textbf{ Ceil} \&from, const \textbf{ Ceil} \&to)
+\begin{DoxyCompactList}\small\item\em The function to validate players move. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ \textbf{ Ceil} $>$ $>$ \& \textbf{ get\+Board} ()
+\item 
+void \textbf{ add\+Move} (const \textbf{ Move} \&move)
+\begin{DoxyCompactList}\small\item\em The function to add players move. \end{DoxyCompactList}\item 
+void \textbf{ process\+Move} (\textbf{ Move} \&move) const
+\begin{DoxyCompactList}\small\item\em The function to process players move. \end{DoxyCompactList}\item 
+bool \textbf{ ceil\+Is\+Under\+Attack} (const \textbf{ Ceil} \&ceil, bool attack\+Colour) const
+\begin{DoxyCompactList}\small\item\em The function to check if players ceil is under attack. \end{DoxyCompactList}\item 
+const vector$<$ \textbf{ Figure} $\ast$ $>$ \& \textbf{ get\+Figures} () const
+\begin{DoxyCompactList}\small\item\em The function get a reference on a vector of all Figures on board. \end{DoxyCompactList}\item 
+bool \textbf{ king\+Is\+Under\+Check} (bool king\+Colour) const
+\begin{DoxyCompactList}\small\item\em The function to check if \doxyref{King}{p.}{class_king} is under check. \end{DoxyCompactList}\item 
+\textbf{ Ceil} \textbf{ get\+Figure\+Ceil} (\textbf{ Figure} $\ast$figure) const
+\begin{DoxyCompactList}\small\item\em The function build a ceil with \doxyref{Figure}{p.}{class_figure}. \end{DoxyCompactList}\item 
+void \textbf{ undo\+Board} ()
+\begin{DoxyCompactList}\small\item\em The function undo last \doxyref{Move}{p.}{class_move}. \end{DoxyCompactList}\item 
+const vector$<$ \textbf{ Move} $>$ \& \textbf{ get\+Move\+History} ()
+\item 
+\textbf{ Move} \textbf{ get\+Last\+Move} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing chess board. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_chess_board_a6585395bb4f064b4f4566df1c7fa4276}} 
+\index{ChessBoard@{ChessBoard}!ChessBoard@{ChessBoard}}
+\index{ChessBoard@{ChessBoard}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{ChessBoard()}
+{\footnotesize\ttfamily Chess\+Board\+::\+Chess\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_chess_board_acece8633f444b90d7b371b57f52d0780}} 
+\index{ChessBoard@{ChessBoard}!````~ChessBoard@{$\sim$ChessBoard}}
+\index{````~ChessBoard@{$\sim$ChessBoard}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{$\sim$ChessBoard()}
+{\footnotesize\ttfamily Chess\+Board\+::$\sim$\+Chess\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_chess_board_a76433a705982b83c0b41fef364116fe7}} 
+\index{ChessBoard@{ChessBoard}!addMove@{addMove}}
+\index{addMove@{addMove}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{addMove()}
+{\footnotesize\ttfamily void Chess\+Board\+::add\+Move (\begin{DoxyParamCaption}\item[{const \textbf{ Move} \&}]{move }\end{DoxyParamCaption})}
+
+
+
+The function to add players move. 
+
+This function gets an instance of class \doxyref{Move}{p.}{class_move} and makes all necessary changes on board.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em move} & instance of class \doxyref{Move}{p.}{class_move} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_chess_board_a79a758c4d7e90e1add4e6367b06e8cf5}} 
+\index{ChessBoard@{ChessBoard}!ceilIsUnderAttack@{ceilIsUnderAttack}}
+\index{ceilIsUnderAttack@{ceilIsUnderAttack}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{ceilIsUnderAttack()}
+{\footnotesize\ttfamily bool Chess\+Board\+::ceil\+Is\+Under\+Attack (\begin{DoxyParamCaption}\item[{const \textbf{ Ceil} \&}]{ceil,  }\item[{bool}]{attack\+Colour }\end{DoxyParamCaption}) const}
+
+
+
+The function to check if players ceil is under attack. 
+
+This function gets an instance of class \doxyref{Ceil}{p.}{class_ceil} and checks if any of opponents figure can move there.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ceil} & instance of class \doxyref{Ceil}{p.}{class_ceil} (players ceil) \\
+\hline
+\mbox{\texttt{ in}}  & {\em attack\+Colour} & colour of opponent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The ceil is under attack \\
+\hline
+{\em FALSE} & The ceil is not under attack \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{class_chess_board_a3cee57048ff9bb0fdc057678c32cee13}} 
+\index{ChessBoard@{ChessBoard}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{getBoard()}
+{\footnotesize\ttfamily vector$<$ vector$<$ \textbf{ Ceil} $>$ $>$ \& Chess\+Board\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_chess_board_a6d2a1eea3a6f2f43f7c76e7788709a14}} 
+\index{ChessBoard@{ChessBoard}!getFigureCeil@{getFigureCeil}}
+\index{getFigureCeil@{getFigureCeil}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{getFigureCeil()}
+{\footnotesize\ttfamily \textbf{ Ceil} Chess\+Board\+::get\+Figure\+Ceil (\begin{DoxyParamCaption}\item[{\textbf{ Figure} $\ast$}]{figure }\end{DoxyParamCaption}) const}
+
+
+
+The function build a ceil with \doxyref{Figure}{p.}{class_figure}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em figure} & pointer on \doxyref{Figure}{p.}{class_figure}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of class \doxyref{Ceil}{p.}{class_ceil} with pointer on figure and its coordinates. 
+\end{DoxyReturn}
+\mbox{\label{class_chess_board_a855702288894dfc8a74f7ca3ecd61e5e}} 
+\index{ChessBoard@{ChessBoard}!getFigures@{getFigures}}
+\index{getFigures@{getFigures}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{getFigures()}
+{\footnotesize\ttfamily const vector$<$ \textbf{ Figure} $\ast$ $>$ \& Chess\+Board\+::get\+Figures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function get a reference on a vector of all Figures on board. 
+
+\begin{DoxyReturn}{Returns}
+Vector of Figures 
+\end{DoxyReturn}
+\mbox{\label{class_chess_board_abd22c9c5d30e0cbf1fc36183a510ef93}} 
+\index{ChessBoard@{ChessBoard}!getLastMove@{getLastMove}}
+\index{getLastMove@{getLastMove}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{getLastMove()}
+{\footnotesize\ttfamily \textbf{ Move} Chess\+Board\+::get\+Last\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_chess_board_a9f3a5dd49ba33ce888754f7fbcfb57ea}} 
+\index{ChessBoard@{ChessBoard}!getMoveHistory@{getMoveHistory}}
+\index{getMoveHistory@{getMoveHistory}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{getMoveHistory()}
+{\footnotesize\ttfamily const vector$<$ \textbf{ Move} $>$ \& Chess\+Board\+::get\+Move\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_chess_board_acccce1afa5e2ba709332a4e796e604c3}} 
+\index{ChessBoard@{ChessBoard}!isValidMove@{isValidMove}}
+\index{isValidMove@{isValidMove}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{isValidMove()}
+{\footnotesize\ttfamily bool Chess\+Board\+::is\+Valid\+Move (\begin{DoxyParamCaption}\item[{const \textbf{ Ceil} \&}]{from,  }\item[{const \textbf{ Ceil} \&}]{to }\end{DoxyParamCaption})}
+
+
+
+The function to validate players move. 
+
+This function gets recieves two Ceils on chess board and validates, if a figure can be moved and if move corresponds with game rules. At first it checks if the figure can move and the if a \doxyref{King}{p.}{class_king} is under the check.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Instance of class \doxyref{Ceil}{p.}{class_ceil} represents from where the figure is being moved. \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Instance of class \doxyref{Ceil}{p.}{class_ceil} represents where to the figure is being moved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The move is correct. \\
+\hline
+{\em FALSE} & The move is not correct. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{class_chess_board_a53799f577813d0ae1e2144132a81e767}} 
+\index{ChessBoard@{ChessBoard}!kingIsUnderCheck@{kingIsUnderCheck}}
+\index{kingIsUnderCheck@{kingIsUnderCheck}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{kingIsUnderCheck()}
+{\footnotesize\ttfamily bool Chess\+Board\+::king\+Is\+Under\+Check (\begin{DoxyParamCaption}\item[{bool}]{king\+Colour }\end{DoxyParamCaption}) const}
+
+
+
+The function to check if \doxyref{King}{p.}{class_king} is under check. 
+
+This function checks every opponents figure if it can move on the ceil where the \doxyref{King}{p.}{class_king} is.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em king\+Colour} & colour of \doxyref{King}{p.}{class_king}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The \doxyref{King}{p.}{class_king} is under check \\
+\hline
+{\em FALSE} & The \doxyref{King}{p.}{class_king} is not under check \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{class_chess_board_a73e38798fecd7c8fb33ad8bad16d4636}} 
+\index{ChessBoard@{ChessBoard}!print\_board@{print\_board}}
+\index{print\_board@{print\_board}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{print\_board()}
+{\footnotesize\ttfamily void Chess\+Board\+::print\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The function to print a chess board into terminal. 
+
+\mbox{\label{class_chess_board_ae5a94267d323844c9280ea91aa35cb5f}} 
+\index{ChessBoard@{ChessBoard}!processMove@{processMove}}
+\index{processMove@{processMove}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{processMove()}
+{\footnotesize\ttfamily void Chess\+Board\+::process\+Move (\begin{DoxyParamCaption}\item[{\textbf{ Move} \&}]{move }\end{DoxyParamCaption}) const}
+
+
+
+The function to process players move. 
+
+This function gets an instance of class \doxyref{Move}{p.}{class_move} and sets a move status depending on constants in \doxyref{Move.\+h}{p.}{_move_8h}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em move} & instance of class \doxyref{Move}{p.}{class_move} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_chess_board_a7f716d784a979853a24662434a984dbc}} 
+\index{ChessBoard@{ChessBoard}!setStart@{setStart}}
+\index{setStart@{setStart}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{setStart()}
+{\footnotesize\ttfamily void Chess\+Board\+::set\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function to prepare a chess board. 
+
+This function gets recieves two Ceils on chess board and validates, if a figure can be moved and if move corresponds with game rules. At first it checks \mbox{\label{class_chess_board_a561968728c7a44489bbab261251b5d0d}} 
+\index{ChessBoard@{ChessBoard}!undoBoard@{undoBoard}}
+\index{undoBoard@{undoBoard}!ChessBoard@{ChessBoard}}
+\doxysubsubsection{undoBoard()}
+{\footnotesize\ttfamily void Chess\+Board\+::undo\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function undo last \doxyref{Move}{p.}{class_move}. 
+
+This function is \char`\"{}opposite\char`\"{} of add\+Move because it is trying to undo all changes that was made with last move. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Board.\+hpp}\item 
+\textbf{ Board.\+cpp}\end{DoxyCompactItemize}

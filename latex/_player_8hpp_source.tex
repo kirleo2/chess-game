@@ -1,0 +1,66 @@
+\doxysection{Player.\+hpp}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  Player.hpp}}
+\DoxyCodeLine{3 \textcolor{comment}{//  chess}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{//  Created by Kirill on 06.05.2022.}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef Player\_hpp}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define Player\_hpp}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}GameEvent.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}Figure.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}Board.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}Move.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{30 \textcolor{keyword}{class }Player \{}
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{33     Player(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& name, \textcolor{keywordtype}{bool} colour) :}
+\DoxyCodeLine{34     name(name),}
+\DoxyCodeLine{35     colour(colour),}
+\DoxyCodeLine{36     gameBoard(nullptr)}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         }
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     Player(\textcolor{keywordtype}{bool} colour, ChessBoard * gameBoard) :}
+\DoxyCodeLine{41     colour(colour),}
+\DoxyCodeLine{42     gameBoard(gameBoard)}
+\DoxyCodeLine{43     \{}
+\DoxyCodeLine{44         }
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \string~Player() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{54     \textcolor{keyword}{virtual} Move move() = 0;}
+\DoxyCodeLine{55     }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} setBoard(ChessBoard * board)\{}
+\DoxyCodeLine{57         gameBoard = board;}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59     }
+\DoxyCodeLine{66     vector<Move> getMovesAndCheckLose() \textcolor{keyword}{const};}
+\DoxyCodeLine{67     }
+\DoxyCodeLine{68     vector<Figure *> getFigures() \textcolor{keyword}{const};}
+\DoxyCodeLine{76     vector<Move> getPossibleMoves() \textcolor{keyword}{const};}
+\DoxyCodeLine{77     }
+\DoxyCodeLine{78     \textcolor{keywordtype}{bool} getColour()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{79         \textcolor{keywordflow}{return} colour;}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81     }
+\DoxyCodeLine{82 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{83     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} transfromPawn() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} colour;}
+\DoxyCodeLine{85     ChessBoard * gameBoard;}
+\DoxyCodeLine{86     }
+\DoxyCodeLine{87 \};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* Player\_hpp */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

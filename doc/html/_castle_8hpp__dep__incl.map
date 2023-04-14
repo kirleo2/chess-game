@@ -1,0 +1,9 @@
+<map id="Castle.hpp" name="Castle.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="270,5,355,32"/>
+<area shape="rect" id="node2" href="$_board_8cpp.html" title=" " alt="" coords="5,80,87,107"/>
+<area shape="rect" id="node3" href="$_castle_8cpp.html" title=" " alt="" coords="111,80,197,107"/>
+<area shape="rect" id="node4" href="$_game_8cpp.html" title=" " alt="" coords="221,80,303,107"/>
+<area shape="rect" id="node5" href="$_king_8cpp.html" title=" " alt="" coords="328,80,401,107"/>
+<area shape="rect" id="node6" href="$_medium_computer_player_8cpp.html" title=" " alt="" coords="426,80,613,107"/>
+<area shape="rect" id="node7" href="$_queen_8cpp.html" title=" " alt="" coords="637,80,722,107"/>
+</map>

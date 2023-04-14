@@ -1,0 +1,259 @@
+\doxysection{Figure Class Reference}
+\label{class_figure}\index{Figure@{Figure}}
+
+
+Abstract class that represents a chess \doxyref{Figure}{p.}{class_figure}.  
+
+
+
+
+{\ttfamily \#include $<$Figure.\+h$>$}
+
+
+
+Inheritance diagram for Figure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_figure__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Figure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_figure__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Figure} (bool \textbf{ colour}, class \textbf{ Chess\+Board} $\ast$board, int x=0, int y=0)
+\item 
+virtual \textbf{ $\sim$\+Figure} ()=default
+\item 
+virtual bool \textbf{ can\+Move} (class \textbf{ Ceil} from, \textbf{ Ceil} to) const =0
+\begin{DoxyCompactList}\small\item\em The function to check if figure can be moved. \end{DoxyCompactList}\item 
+virtual \textbf{ Figure} $\ast$ \textbf{ clone} () const =0
+\begin{DoxyCompactList}\small\item\em The function to make a copy of figure. \end{DoxyCompactList}\item 
+bool \textbf{ get\+Colour} () const
+\begin{DoxyCompactList}\small\item\em The function to get figures colour. \end{DoxyCompactList}\item 
+void \textbf{ update\+Current\+Position} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function to update current figures position. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \textbf{ get\+Current\+Position} () const
+\begin{DoxyCompactList}\small\item\em The function get current figures position. \end{DoxyCompactList}\item 
+void \textbf{ kill} ()
+\begin{DoxyCompactList}\small\item\em The function to kill figure. \end{DoxyCompactList}\item 
+void \textbf{ revive} ()
+\begin{DoxyCompactList}\small\item\em The function to revive figure (it is necessecary to undo the board changed by move validation) \end{DoxyCompactList}\item 
+bool \textbf{ is\+Alive} () const
+\begin{DoxyCompactList}\small\item\em The function to check if figure is alive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ icon}
+\item 
+bool \textbf{ is\+First\+Move}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Chess\+Board} $\ast$ \textbf{ chess\+Board}
+\item 
+bool \textbf{ is\+\_\+alive}
+\item 
+bool \textbf{ colour}
+\item 
+pair$<$ int, int $>$ \textbf{ current\+\_\+position}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class that represents a chess \doxyref{Figure}{p.}{class_figure}. 
+
+It has \+: icon -\/ fugure\textquotesingle{}s icon is\+First\+Move -\/ flag if figure has moved chess\+Board -\/ pointer to Board. It is necessary for can\+Move logic colour -\/ colour of the figure is\+\_\+alive -\/ flag if figure has been killed current\+Position -\/ pair of x and y coordinates 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_figure_ab37077c3f3ba528e2cf08e29f44da9e7}} 
+\index{Figure@{Figure}!Figure@{Figure}}
+\index{Figure@{Figure}!Figure@{Figure}}
+\doxysubsubsection{Figure()}
+{\footnotesize\ttfamily Figure\+::\+Figure (\begin{DoxyParamCaption}\item[{bool}]{colour,  }\item[{class \textbf{ Chess\+Board} $\ast$}]{board,  }\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{class_figure_a7d1d880545c2a5a8ccde709903aa783c}} 
+\index{Figure@{Figure}!````~Figure@{$\sim$Figure}}
+\index{````~Figure@{$\sim$Figure}!Figure@{Figure}}
+\doxysubsubsection{$\sim$Figure()}
+{\footnotesize\ttfamily virtual Figure\+::$\sim$\+Figure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_figure_a881aaea1c8bc3e1d81a582e6508fc8f2}} 
+\index{Figure@{Figure}!canMove@{canMove}}
+\index{canMove@{canMove}!Figure@{Figure}}
+\doxysubsubsection{canMove()}
+{\footnotesize\ttfamily virtual bool Figure\+::can\+Move (\begin{DoxyParamCaption}\item[{class \textbf{ Ceil}}]{from,  }\item[{\textbf{ Ceil}}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The function to check if figure can be moved. 
+
+For each figure it has it own implementation. It is important to have a pointer on board to check if other figures are on the way
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & instance of class \doxyref{Ceil}{p.}{class_ceil} (start ceil) \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & instance of class \doxyref{Ceil}{p.}{class_ceil} (end ceil)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The figure can move \\
+\hline
+{\em FALSE} & The figure can not move \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \textbf{ Bishop} \doxyref{}{p.}{class_bishop_a4b77f9e874f57de474c51f43fa13e5e3}, \textbf{ Castle} \doxyref{}{p.}{class_castle_a1840f65d76ae5f2bc8158cff02a2ab9f}, \textbf{ King} \doxyref{}{p.}{class_king_ab383d69a16c719ea97f3e88ab42bb8ef}, \textbf{ Knight} \doxyref{}{p.}{class_knight_a78bb271e413ef6cfc18d711724af6e22}, \textbf{ Pawn} \doxyref{}{p.}{class_pawn_adc0c07b8202d41760dcbc6b3cd0beed2}, and \textbf{ Queen} \doxyref{}{p.}{class_queen_a2207c00470d0c164530b4309c9099e77}.
+
+\mbox{\label{class_figure_a41bf1b9c2af03790367664f43aa79fc2}} 
+\index{Figure@{Figure}!clone@{clone}}
+\index{clone@{clone}!Figure@{Figure}}
+\doxysubsubsection{clone()}
+{\footnotesize\ttfamily virtual \textbf{ Figure} $\ast$ Figure\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The function to make a copy of figure. 
+
+\begin{DoxyReturn}{Returns}
+Pointer on class \doxyref{Figure}{p.}{class_figure}, that is a copy of itself 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ Bishop} \doxyref{}{p.}{class_bishop_a7b8cd1acba9e555b974b21182f7cc533}, \textbf{ Castle} \doxyref{}{p.}{class_castle_ac69b83a65b5ad67c5da888fb2fb27629}, \textbf{ King} \doxyref{}{p.}{class_king_ac0bfcaa5ec329a03c065f7ddd0328b96}, \textbf{ Knight} \doxyref{}{p.}{class_knight_a97be65d845e3e747e70628817efce409}, \textbf{ Pawn} \doxyref{}{p.}{class_pawn_a5d2577a647bd954f3c4c73758dc1550e}, and \textbf{ Queen} \doxyref{}{p.}{class_queen_acb0365a241293ec7a7ce85833e555098}.
+
+\mbox{\label{class_figure_ae38ece99bafa2eb155dd26e79d9fb05f}} 
+\index{Figure@{Figure}!getColour@{getColour}}
+\index{getColour@{getColour}!Figure@{Figure}}
+\doxysubsubsection{getColour()}
+{\footnotesize\ttfamily bool Figure\+::get\+Colour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function to get figures colour. 
+
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The colour is WHITE \\
+\hline
+{\em FALSE} & The figure is BLACK \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{class_figure_a6074d17db22c83a849f98f78ec319af5}} 
+\index{Figure@{Figure}!getCurrentPosition@{getCurrentPosition}}
+\index{getCurrentPosition@{getCurrentPosition}!Figure@{Figure}}
+\doxysubsubsection{getCurrentPosition()}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Figure\+::get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function get current figures position. 
+
+\mbox{\label{class_figure_ad6fe85bdf8016a3c8680daa1f3d76e2d}} 
+\index{Figure@{Figure}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Figure@{Figure}}
+\doxysubsubsection{isAlive()}
+{\footnotesize\ttfamily bool Figure\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function to check if figure is alive. 
+
+\mbox{\label{class_figure_abe85df8253db2025a1412683a7d345e0}} 
+\index{Figure@{Figure}!kill@{kill}}
+\index{kill@{kill}!Figure@{Figure}}
+\doxysubsubsection{kill()}
+{\footnotesize\ttfamily void Figure\+::kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function to kill figure. 
+
+\mbox{\label{class_figure_a41b41891d7cef058967b1a84dea2178d}} 
+\index{Figure@{Figure}!revive@{revive}}
+\index{revive@{revive}!Figure@{Figure}}
+\doxysubsubsection{revive()}
+{\footnotesize\ttfamily void Figure\+::revive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function to revive figure (it is necessecary to undo the board changed by move validation) 
+
+\mbox{\label{class_figure_abc7ebd489e4fe3d4395db9607afa39b3}} 
+\index{Figure@{Figure}!updateCurrentPosition@{updateCurrentPosition}}
+\index{updateCurrentPosition@{updateCurrentPosition}!Figure@{Figure}}
+\doxysubsubsection{updateCurrentPosition()}
+{\footnotesize\ttfamily void Figure\+::update\+Current\+Position (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function to update current figures position. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_figure_a2803197b7babf0446e9e97b752a679d9}} 
+\index{Figure@{Figure}!chessBoard@{chessBoard}}
+\index{chessBoard@{chessBoard}!Figure@{Figure}}
+\doxysubsubsection{chessBoard}
+{\footnotesize\ttfamily \textbf{ Chess\+Board}$\ast$ Figure\+::chess\+Board\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_figure_a955d0dc1170bc9ecaa0d16e7da8a5327}} 
+\index{Figure@{Figure}!colour@{colour}}
+\index{colour@{colour}!Figure@{Figure}}
+\doxysubsubsection{colour}
+{\footnotesize\ttfamily bool Figure\+::colour\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_figure_ab3823eab5d68bd81390a95d741badfec}} 
+\index{Figure@{Figure}!current\_position@{current\_position}}
+\index{current\_position@{current\_position}!Figure@{Figure}}
+\doxysubsubsection{current\_position}
+{\footnotesize\ttfamily pair$<$int, int$>$ Figure\+::current\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_figure_a21ef6be3f88b583d44276d54f260c49e}} 
+\index{Figure@{Figure}!icon@{icon}}
+\index{icon@{icon}!Figure@{Figure}}
+\doxysubsubsection{icon}
+{\footnotesize\ttfamily string Figure\+::icon}
+
+\mbox{\label{class_figure_a3ce41a8dcc02ed4c2024e4568a41067d}} 
+\index{Figure@{Figure}!is\_alive@{is\_alive}}
+\index{is\_alive@{is\_alive}!Figure@{Figure}}
+\doxysubsubsection{is\_alive}
+{\footnotesize\ttfamily bool Figure\+::is\+\_\+alive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_figure_ae9dc4ef1e81b6feaf561aa3fb1cffb28}} 
+\index{Figure@{Figure}!isFirstMove@{isFirstMove}}
+\index{isFirstMove@{isFirstMove}!Figure@{Figure}}
+\doxysubsubsection{isFirstMove}
+{\footnotesize\ttfamily bool Figure\+::is\+First\+Move}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Figure.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\doxysection{Bishop Class Reference}
+\label{class_bishop}\index{Bishop@{Bishop}}
+
+
+Class representing chess figure -\/ \doxyref{Bishop}{p.}{class_bishop}.  
+
+
+
+
+{\ttfamily \#include $<$Bishop.\+hpp$>$}
+
+
+
+Inheritance diagram for Bishop\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{class_bishop__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bishop\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_bishop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bishop} (bool \textbf{ colour}, \textbf{ Chess\+Board} $\ast$board, int x=0, int y=0)
+\item 
+virtual \textbf{ Figure} $\ast$ \textbf{ clone} () const override
+\begin{DoxyCompactList}\small\item\em The function to make a copy of figure. \end{DoxyCompactList}\item 
+virtual bool \textbf{ can\+Move} (\textbf{ Ceil} from, \textbf{ Ceil} to) const override
+\begin{DoxyCompactList}\small\item\em The function to check if figure can be moved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing chess figure -\/ \doxyref{Bishop}{p.}{class_bishop}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_bishop_a04468cc563be8fb921cfd78cfcba406b}} 
+\index{Bishop@{Bishop}!Bishop@{Bishop}}
+\index{Bishop@{Bishop}!Bishop@{Bishop}}
+\doxysubsubsection{Bishop()}
+{\footnotesize\ttfamily Bishop\+::\+Bishop (\begin{DoxyParamCaption}\item[{bool}]{colour,  }\item[{\textbf{ Chess\+Board} $\ast$}]{board,  }\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_bishop_a4b77f9e874f57de474c51f43fa13e5e3}} 
+\index{Bishop@{Bishop}!canMove@{canMove}}
+\index{canMove@{canMove}!Bishop@{Bishop}}
+\doxysubsubsection{canMove()}
+{\footnotesize\ttfamily bool Bishop\+::can\+Move (\begin{DoxyParamCaption}\item[{\textbf{ Ceil}}]{from,  }\item[{\textbf{ Ceil}}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The function to check if figure can be moved. 
+
+For each figure it has it own implementation. It is important to have a pointer on board to check if other figures are on the way
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & instance of class \doxyref{Ceil}{p.}{class_ceil} (start ceil) \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & instance of class \doxyref{Ceil}{p.}{class_ceil} (end ceil)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & The figure can move \\
+\hline
+{\em FALSE} & The figure can not move \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \textbf{ Figure} \doxyref{}{p.}{class_figure_a881aaea1c8bc3e1d81a582e6508fc8f2}.
+
+\mbox{\label{class_bishop_a7b8cd1acba9e555b974b21182f7cc533}} 
+\index{Bishop@{Bishop}!clone@{clone}}
+\index{clone@{clone}!Bishop@{Bishop}}
+\doxysubsubsection{clone()}
+{\footnotesize\ttfamily virtual \textbf{ Figure} $\ast$ Bishop\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The function to make a copy of figure. 
+
+\begin{DoxyReturn}{Returns}
+Pointer on class \doxyref{Figure}{p.}{class_figure}, that is a copy of itself 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Figure} \doxyref{}{p.}{class_figure_a41bf1b9c2af03790367664f43aa79fc2}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bishop.\+hpp}\item 
+\textbf{ Bishop.\+cpp}\end{DoxyCompactItemize}

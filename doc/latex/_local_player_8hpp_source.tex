@@ -1,0 +1,24 @@
+\doxysection{Local\+Player.\+hpp}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef LocalPlayer\_hpp}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define LocalPlayer\_hpp}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef Player\_hpp}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Player.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }LocalPlayer: \textcolor{keyword}{public} Player \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     LocalPlayer (\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& name, \textcolor{keywordtype}{bool} colour) : Player(name, colour) \{\}}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} Move move() \textcolor{keyword}{override};}
+\DoxyCodeLine{36 \textcolor{keyword}{private}:}
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} transfromPawn() \textcolor{keyword}{const override};}
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

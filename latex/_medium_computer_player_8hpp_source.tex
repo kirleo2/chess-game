@@ -1,0 +1,54 @@
+\doxysection{Medium\+Computer\+Player.\+hpp}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  MediumComputerPlayer.hpp}}
+\DoxyCodeLine{3 \textcolor{comment}{//  chess}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{//  Created by Kirill on 20.05.2022.}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef MediumComputerPlayer\_hpp}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define MediumComputerPlayer\_hpp}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef Player\_hpp}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}Player.hpp"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }MediumComputerPlayer: \textcolor{keyword}{public} Player \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     MediumComputerPlayer (\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& name, \textcolor{keywordtype}{bool} colour) : Player(name, colour) \{\}}
+\DoxyCodeLine{26     MediumComputerPlayer (\textcolor{keywordtype}{bool} colour, ChessBoard * gameBoard) : Player(colour, gameBoard) \{\}}
+\DoxyCodeLine{27     }
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} Move move() \textcolor{keyword}{override};}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} transfromPawn()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{39         \textcolor{keywordflow}{return} QUEEN;}
+\DoxyCodeLine{40     \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{44     \textcolor{keyword}{const} \textcolor{keywordtype}{int} MIN\_VALUE = -\/9999;}
+\DoxyCodeLine{45     \textcolor{keyword}{const} \textcolor{keywordtype}{int} MAX\_VALUE = 9999;}
+\DoxyCodeLine{46     }
+\DoxyCodeLine{47     \textcolor{comment}{// constants to evaluate position after move}}
+\DoxyCodeLine{48     \textcolor{keyword}{enum} figure\_prices : \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{49         PAWN\_PRICE = 10,}
+\DoxyCodeLine{50         KNIGHT\_PRICE = 30,}
+\DoxyCodeLine{51         BISHOP\_PRICE = 30,}
+\DoxyCodeLine{52         CASTLE\_PRICE = 50,}
+\DoxyCodeLine{53         QUEEN\_PRICE = 90,}
+\DoxyCodeLine{54         KING\_PRICE = 900,}
+\DoxyCodeLine{55         CHECK\_PRICE = 9,}
+\DoxyCodeLine{56         CASTLING\_PRICE = 5}
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{66     \textcolor{keywordtype}{int} evaluateBoard();}
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* MediumComputerPlayer\_hpp */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
