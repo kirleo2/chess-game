@@ -14,10 +14,10 @@ Queen.o Pawn.o Knight.o LocalPlayer.o Player.o Serialization.o
 compile: main.o AIComputerPlayer.o Bishop.o Board.o Castle.o \
 DummyComputerPlayer.o MediumComputerPlayer.o Game.o King.o \
 Queen.o Pawn.o Knight.o LocalPlayer.o Player.o Serialization.o
-	${LD} ${LDFLAGS} $^ -o leonokir
+	${LD} ${LDFLAGS} $^ -o chess
 
 run:
-	./leonokir
+	./chess
 doc:
 	
 
@@ -92,4 +92,4 @@ main.o: src/main.cpp src/Game.hpp src/Board.hpp src/Ceil.h src/Figure.h \
 clean:
 	rm -f main.o AIComputerPlayer.o Bishop.o Board.o Castle.o \
 DummyComputerPlayer.o MediumComputerPlayer.o Game.o King.o \
-Queen.o Pawn.o Knight.o LocalPlayer.o Player.o Serialization.o leonokir
+Queen.o Pawn.o Knight.o LocalPlayer.o Player.o Serialization.o chess
